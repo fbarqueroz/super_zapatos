@@ -1,0 +1,26 @@
+<h1>Super Zapatos</h1>
+<h2>Store form</h2>
+
+<%= form_for :store do |f| %>
+  <label>Store ID</label><br/>
+  <%= f.text_field :store_id %><br/>
+  <label>Store name</label><br/>
+  <%= f.text_field :name %><br/>
+  <label>Address</label><br/>
+  <%= f.text_field :address %><br/>
+  <%= f.submit "Submit" %>
+<% end %>
+
+<h3>Display store info on DB</h3>
+<% if !@stores.blank? %>
+  <p>---------------------------<p/>
+  <p>---------------------------<p/>
+  <% for items in @store %> 
+    <%= item.store_id %> <br/>
+    <%= item.name %> <br/>
+    <%= item.address %> <br/>
+  <% end %>
+    <p>---------------------------<p/>
+    <p>---------------------------<p/>
+<% else %>
+<% end %>

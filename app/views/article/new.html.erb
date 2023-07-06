@@ -1,0 +1,31 @@
+<h1>Super Zapatos</h1>
+<h2>Article form</h2>
+
+<%= form_for :article do |f| %>
+  <div class"article_form">
+    <label>Article ID</label>
+    <%= f.text_field :id_article %><br/>
+    <label>Article name</label>
+    <%= f.text_field :name %><br/>
+    <label>Description</label>
+    <%= f.text_field :description %><br/>
+    <label>Price ($)</label>
+    <%= f.text_field :price %><br/>
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>
+
+<h3>Display article info on DB</h3>
+<% if !@article.blank? %>
+  <p>---------------------------<p/>
+  <p>---------------------------<p/>
+  <% for items in @articles %>
+    <%= item.id_article %> <br/>
+    <%= item.name %> <br/>
+    <%= item.description %> <br/>
+    <%= item.price %> <br/>
+  <% end %>
+  <p>---------------------------<p/>
+  <p>---------------------------<p/>
+<% else %>
+<% end %>
